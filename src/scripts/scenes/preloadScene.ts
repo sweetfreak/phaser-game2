@@ -4,12 +4,16 @@ export default class PreloadScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('paulfrog', 'assets/img/paulfrog.png')
-    this.load.image('fly', 'assets/img/fly.jpeg')
+    this.load.image('asteroid', 'assets/img/asteroid.png')
+    this.load.image('myShip', 'assets/img/myShip.png')
+    this.load.image('enemyShip', 'assets/img/enemyShip.png')
+    this.load.image('bg', 'assets/img/spaceBg.png')
+
   }
 
   create() {
     this.scene.start('MainScene')
+    this.add.image(720, 480, 'bg')
 
     /**
      * This is how you would dynamically import the mainScene class (with code splitting),
